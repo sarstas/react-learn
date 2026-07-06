@@ -7,9 +7,7 @@ export const RestaurantsPage = ({restaurants}: { restaurants: IRestaurant[] }) =
             {restaurants.map((restaurant) => (
                 <Restaurant
                     key={restaurant.id}
-                    restaurant={restaurant}>
-                    {restaurant.name}
-                </Restaurant>
+                    restaurant={restaurant}/>
             ))}
         </div>
     );
