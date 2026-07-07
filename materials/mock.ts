@@ -1,4 +1,4 @@
-import {IRestaurantList} from "../src/interface/restaurant-list.interface.ts";
+import type { IRestaurant } from "../src/interface/restaurant.interface";
 
 export const restaurants: IRestaurant[] = [
   {

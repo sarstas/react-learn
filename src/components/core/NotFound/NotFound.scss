@@ -1,0 +1,21 @@
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 80px 16px;
+  text-align: center;
+
+  &__code {
+    font-size: 72px;
+    font-weight: 700;
+    color: #333;
+    line-height: 1;
+  }
+
+  &__text {
+    font-size: 18px;
+    color: #888;
+  }
+}
