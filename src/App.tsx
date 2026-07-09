@@ -1,11 +1,17 @@
-import './App.css'
-import { RestaurantsPage } from './components/RestoranModule/RestaurantsPage/RestaurantsPage'
-import type { IRestaurant } from './interface/restaurant.interface'
+import './App.scss'
+import { Footer } from './components/core/Footer/Footer'
+import { Header } from './components/core/Header/Header'
+import { RestaurantsPage } from "./components/RestaurantModule/RestaurantsPage/RestaurantsPage";
 
-function App({restaurants}: { restaurants: IRestaurant[] }) {
-
+function App() {
   return (
-        <RestaurantsPage restaurants={restaurants}/>
+        <div className="app">
+            <Header />
+            <main className="app__content">
+                <RestaurantsPage />
+            </main>
+            <Footer />
+        </div>
   )
 }
 

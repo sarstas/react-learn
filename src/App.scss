@@ -1,0 +1,17 @@
+/* ===== Layout приложения ===== */
+
+/* Колонка на всю высоту экрана: header — content — footer */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Контент занимает всё свободное место и прижимает футер к низу */
+.app__content {
+  flex: 1;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
