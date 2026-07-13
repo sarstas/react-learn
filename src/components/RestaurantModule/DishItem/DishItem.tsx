@@ -1,24 +1,23 @@
-import { useState } from 'react';
 import './DishItem.scss'
-import type { IMenu } from "../../../interface/menu.interface.ts";
 
-const MIN_COUNT = 0;
-const MAX_COUNT = 5;
+type Props = {
+    name: string;
+    count: number;
+    min?: number;
+    max?: number;
+    onChange: (value: number) => void;
+};
 
-export const DishItem = ({ menu }: { menu: IMenu }) => {
-    const [count, setCount] = useState(MIN_COUNT);
-
-    const decrement = () => setCount((prev) => Math.max(MIN_COUNT, prev - 1));
-    const increment = () => setCount((prev) => Math.min(MAX_COUNT, prev + 1));
+export const DishItem = ({ name, count, min = 0, max = 5, onChange }: Props) => {
+    const decrement = () => onChange(Math.max(min, count - 1));
+    const increment = () => onChange(Math.min(max, count + 1));
 
     return (
-        <>
-            <div className="dish-item">
-                <span>{menu.name}</span>
-                <button onClick={decrement}>-</button>
-                <span>{count}</span>
-                <button onClick={increment}>+</button>
-            </div>
-        </>
+        <div className="dish-item">
+            <span className="dish-item__name">{name}</span>
+            <button type="button" onClick={decrement}>-</button>
+            <span className="dish-item__count">{count}</span>
+            <button type="button" onClick={increment}>+</button>
+        </div>
     );
 };
