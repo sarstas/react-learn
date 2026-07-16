@@ -1,4 +1,14 @@
 .dish-item {
   display: flex;
   align-items: center;
+  margin: 10px 0;
+
+  &__name {
+    font-weight: 500;
+    margin-right: 10px;
+  }
+
+  &__count {
+    margin: 0 6px 0;
+  }
 }

@@ -14,7 +14,9 @@ export const RestaurantsPage = () => {
                 activeId={activeId}
                 onTabClick={setActiveId}
             />
-            {activeRestaurant && <Restaurant restaurant={activeRestaurant} />}
+            {activeRestaurant && (
+                <Restaurant key={activeRestaurant.id} restaurant={activeRestaurant} />
+            )}
         </div>
     );
 };
